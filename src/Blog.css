@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+body {
+  background-color: rgb(249, 228, 222);
+}
+
+.header {
+  font-family: 'Quicksand';
+  font-size: 24px;
+  text-align: center;
+  margin-top: 45px;
+  margin-bottom: 30px;
+}
+
+.blog-date{
+  text-align: center;
+  font-size: 18px;
+}
+
+.blog-content {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+p {
+  font-family: 'Source Sans Pro';
+  text-align: left;
+}
