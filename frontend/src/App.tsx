@@ -10,7 +10,7 @@ import Reflection1 from './Reflection1';
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />}>
+      <Route path="/home" element={<Home />}>
       </Route>
       <Route path="/reflection1" element={<Reflection1 />}>
       </Route>
