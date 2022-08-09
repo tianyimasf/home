@@ -6,6 +6,7 @@ import { Route, Routes, Link } from 'react-router-dom';
 import Home from './Home';
 import MazeGenerator from './MazeGenerator';
 import Reflection1 from './Reflection1';
+import TODOProject from './TODOProjects';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
       <Route path="/reflection1" element={<Reflection1 />}>
       </Route>
       <Route path="/mazegen" element={<MazeGenerator />}>
+      </Route>
+      <Route path="/todoprojects" element={<TODOProject />}>
       </Route>
     </Routes>
   );
