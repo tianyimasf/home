@@ -34,8 +34,10 @@ class TODOProject extends React.Component {
 
                 <p><b>3D Shapes | not started</b></p>
                 <p>Model 3D Shapes and present them in browser</p>
+                <br></br>
 
-                
+                <p><b>Collage Maker | not started</b></p>
+                <p>Upload a set of PNGs and make collage with them!</p>
             </div>
         </div>
       </body>
