@@ -17,7 +17,7 @@ class Home extends React.Component {
               <p>She programs quite a bit, and apparently also talks in third person perspective</p>
               <p>She grew up in Beijing, with a lot of good people, and consider herself very privileged.</p>
               <p>Her current interests includes algorithmic game theory, data science, creative coding, and building software infrastructure.</p>
-              <p><a href='https://www.linkedin.com/in/tianyi-ma-9b2012170/'>LinkedIn</a> Email: tianyi.ma@scale.com</p>
+              <p><a href='https://www.linkedin.com/in/tianyi-ma-9b2012170/'>LinkedIn</a> <a href='https://github.com/tianyimasf'>Github</a> Email: tianyi.ma@scale.com</p>
             </div>
           </div>
           <br></br>
