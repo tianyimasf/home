@@ -7,6 +7,7 @@ import Home from './Home';
 import MazeGenerator from './MazeGenerator';
 import Reflection1 from './Reflection1';
 import TODOProject from './TODOProjects';
+import FreeFromStress from './freeFromStress';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
       <Route path="/mazegen" element={<MazeGenerator />}>
       </Route>
       <Route path="/todoprojects" element={<TODOProject />}>
+      </Route>
+      <Route path="/freefromstress" element={<FreeFromStress />}>
       </Route>
     </Routes>
   );
