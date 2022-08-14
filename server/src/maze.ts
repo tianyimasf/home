@@ -12,7 +12,8 @@ pick an entrance. from that entrance, perform BFS. For the first search path tha
 is blocked by branches of at least length 1, open the edge in front of the path. if one entrance doesn't work, try randomly 
 another one
 
-implementationally, need to store the branches as lists of coordinates. so that we can check rectangles more easily
+implementationally, need to store the branches as lists of coordinates to generate branches, and also a sorted matrix, which 
+programmatically is a n x n boolean matrix where each coordinates for branches is true, otherwise false, to check blockers/rectangles. 
 
 notes: need to grow branches from branches, and need to set the rate properly
 */
@@ -30,67 +31,182 @@ interface Coordinate {
 
 interface Branch {
     branch: Coordinate[],
+    isEdge: boolean,
 }
 
 interface Path {
     path: Coordinate[],
 }
 
+const buildEmptyMaze = (n: number) => {
+    const maze: boolean[][] = [];
+    for (let i = 0; i < n; i++){
+        maze.push(new Array(n).fill(false));
+    }
+    return maze;
+}
+
 // Base Branch
-// TODO: optimize order of coordinates so that it's easier to find rectangle
-const buildEdges = (n: number) => {
-    const edges: Branch = { branch: [] };
+const buildEdges = (n: number, maze: boolean[][]) => {
+    const edges: Branch[] = [];
+    let edge: Branch = { branch: [], isEdge: true};
     for (let i = 0; i < n; i++){
-        edges.branch.push({x: i, y: 0, direction: Direction.Horizonatal})
+        edge.branch.push({x: i, y: 0, direction: Direction.Horizonatal});
+        maze[i][0] = true;
     }
+    edges.push(edge);
+    edge = { branch: [], isEdge: true};
     for (let i = 0; i < n; i++){
-        edges.branch.push({x: n-1, y: i, direction: Direction.Vertical})
+        edge.branch.push({x: n-1, y: i, direction: Direction.Vertical});
+        maze[n-1][i] = true;
     }
+    edges.push(edge);
+    edge = { branch: [], isEdge: true};
     for (let i = 0; i < n; i++){
-        edges.branch.push({x: i, y: n-1, direction: Direction.Horizonatal})
+        edge.branch.push({x: i, y: n-1, direction: Direction.Horizonatal});
+        maze[i][n-1] = true;
     }
-    for (let i = 1; i < n; i++){
-        edges.branch.push({x: 0, y: i, direction: Direction.Vertical})
+    edges.push(edge);
+    edge = { branch: [], isEdge: true};
+    for (let i = 0; i < n; i++){
+        edge.branch.push({x: 0, y: i, direction: Direction.Vertical});
+        maze[0][i] = true;
     }
+    edges.push(edge);
     return edges;
 }
 
 const buildLockedMaze = (edges: Branch, n: number, alpha: number) => {
     const lockedMaze = [ edges ];
     const queue = lockedMaze;
-    // Build branches using BFS
+    // TODO: Build branches using BFS
     while (queue) {
         const branch = queue.pop();
     }
 }
 
-const generateBranches = (branch: Branch, alpha: number, isEdge = false ) => {
-    const branches: Branch[] = [];
-    for (const coordinate of branch.branch) {
-        // roll to add branch
-        const p = Math.random();
-        if (p > alpha){
-            continue;
-        }
-        if (coordinate.direction == Direction.Horizonatal){
-            // TODO: check if edges and if forms deadend
-            const p = Math.random();
-            let x = coordinate.x;
-            if (p > 0.5) {
-                x += 1;
-            } else {
-                x -= 1;
+const growBranch = (branch: Branch, n: number, alpha: number, beta: number, maze: boolean[][]) => {
+    const newBranches: Branch[] = [];
+    for (let i = 0; i < branch.branch.length; i++) {
+        // if is edge, try grow branch if it's not endpoints
+        const coordinate = branch.branch[i];
+        if (i != 0 && i != branch.branch.length - 1){
+            const newBranch = maybeGrowABranch(alpha, beta, n, coordinate, true, maze);
+            if (newBranch){ // if a new branch is grown
+                newBranches.push(newBranch)
             }
-            const newBranch = {branch: [{x, y: coordinate.y, direction: Direction.Vertical}]};
-            branches.push(newBranch);
-        } else {
-
+        } else if (!branch.isEdge && i == branch.branch.length -1){
+            const newCoordinate = growEndOfBranch(coordinate);
+            if (isConnectingBranch(newCoordinate, maze)){
+                const connectBranch = maybeConnectBranch(beta);
+                if (connectBranch) {
+                    updateMaze(newCoordinate, maze);
+                    branch.branch.push(newCoordinate);
+                }
+            }
         }
     }
-    
+}
+
+const maybeGrowABranch = (alpha: number, beta: number, n: number, coordinate: Coordinate, isEdge: boolean, maze: boolean[][]) => {
+    const p = Math.random();
+    if (p > alpha){
+        return;
+    }
+    if (coordinate.direction == Direction.Vertical){
+        const p = Math.random();
+        let x = coordinate.x;
+        if (isEdge && coordinate.x == 0) {
+            x += 1;
+        } else if (isEdge && coordinate.x == n-1) {
+            x -= 1;
+        } else if (p > 0.5) {
+            x += 1;
+        } else {
+            x -= 1;
+        }
+        const newCoordinate = {x, y: coordinate.y, direction: Direction.Horizonatal};
+        const newBranch = {branch: [newCoordinate], isEdge: false};
+        if (isConnectingBranch(newCoordinate, maze) && maybeConnectBranch(beta)) {
+            updateMaze(newCoordinate, maze);
+            return newBranch;
+        }
+    } else {
+        const p = Math.random();
+        let y = coordinate.y;
+        if (isEdge && coordinate.y == 0) {
+            y += 1;
+        } else if (isEdge && coordinate.y == n-1) {
+            y -= 1;
+        } else if (p > 0.5) {
+            y += 1;
+        } else {
+            y -= 1;
+        }
+        const newCoordinate = {x: coordinate.x, y, direction: Direction.Vertical};
+        const newBranch = {branch: [newCoordinate], isEdge: false};
+        if (isConnectingBranch(newCoordinate, maze) && maybeConnectBranch(beta)) {
+            updateMaze(newCoordinate, maze);
+            return newBranch;
+        }
+    }
+}
+
+const growEndOfBranch = (coordinate: Coordinate): Coordinate => {
+    let x = coordinate.x;
+    let y = coordinate.y;
+    const p = Math.random();
+    if (coordinate.direction == Direction.Horizonatal){
+        if (p > 2/3) {
+            y += 1;
+            return {x, y, direction: Direction.Vertical};
+        } else if (p > 1/3) {
+            y -= 1;
+            return {x, y, direction: Direction.Vertical};
+        } else {
+            x += 1;
+            return {x, y, direction: Direction.Horizonatal};
+        }
+    } else {
+        if (p > 2/3) {
+            x += 1;
+            return {x, y, direction: Direction.Horizonatal};
+        } else if (p > 1/3) {
+            x -= 1;
+            return {x, y, direction: Direction.Horizonatal};
+        } else {
+            y += 1;
+            return {x, y, direction: Direction.Vertical};
+        }
+    }
+}
+
+const updateMaze = (newCoordinate: Coordinate, maze: boolean[][]) => {
+    const x = newCoordinate.x;
+    const y = newCoordinate.y;
+    maze[x][y] = true;
+}
+
+const isConnectingBranch = (newCoordinate: Coordinate, maze: boolean[][]): boolean => {
+    const x = newCoordinate.x;
+    const y = newCoordinate.y;
+    return maze[x][y];
+}
+
+const maybeConnectBranch = (beta: number): boolean => {
+    // TODO: check if connecting to the other branch will form a rectangle
+    //       using variable maze and a BFS.
+    //       if not, roll a die to decide if going to connect
+    const p = Math.random()
+    if (p < beta) { 
+        return true;
+    } else {
+        return false;
+    }
 }
 
 const buildMaze = (n: number, alpha: number) => {
-    const edges: Branch = buildEdges(n);
+    const maze: boolean[][] = buildEmptyMaze(n); // keep track of the maze from a general pov
+    const edges: Branch[] = buildEdges(n, maze);
 
 }
