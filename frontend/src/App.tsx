@@ -5,7 +5,6 @@ import './App.css';
 import { Route, Routes, Link } from 'react-router-dom';
 import Home from './Home';
 import MazeGenerator from './MazeGenerator';
-import Reflection1 from './Reflection1';
 import TODOProject from './TODOProjects';
 import FreeFromStress from './freeFromStress';
 
@@ -13,8 +12,6 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />}>
-      </Route>
-      <Route path="/reflection1" element={<Reflection1 />}>
       </Route>
       <Route path="/mazegen" element={<MazeGenerator />}>
       </Route>

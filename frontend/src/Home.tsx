@@ -26,7 +26,6 @@ class Home extends React.Component {
           <p className='creation'>Blogs</p>
           <p className='creation'><a href='/freefromstress'>Free From Stress | last updated: 8/13/2022</a></p>
           <p className='creation'><a href='/TODOProjects'>TODO: projects | last updated: 8/13/2022</a></p>
-          <p className='creation'><a href='/reflection1'>Reflection 1 | last updated: 8/6/2022</a></p>
         </div>
       </body>
     );
