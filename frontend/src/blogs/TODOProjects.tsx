@@ -38,6 +38,10 @@ class TODOProject extends React.Component {
 
                 <p><b>Collage Maker | not started</b></p>
                 <p>Upload a set of PNGs and make collage with them!</p>
+                <br></br>
+
+                <p><b>Graph visualizer and analyzer | not started</b></p>
+                <p>Visualize and analyze complex networks! (plan to be implemented in python)</p>
             </div>
         </div>
       </body>

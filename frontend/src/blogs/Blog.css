@@ -23,6 +23,18 @@ body {
   margin-right: 15%;
 }
 
+.blog-img-horizontal {
+  width: 70%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.blog-img-vertical {
+  width: 40%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 p {
   font-family: 'Source Sans Pro';
   text-align: left;

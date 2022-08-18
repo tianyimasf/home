@@ -1,12 +1,10 @@
-import React from 'react';
-import logo from './logo.svg';
-import PFP from './pfp.jpg';
 import './App.css';
 import { Route, Routes, Link } from 'react-router-dom';
 import Home from './Home';
 import MazeGenerator from './MazeGenerator';
-import TODOProject from './TODOProjects';
-import FreeFromStress from './freeFromStress';
+import TODOProject from './blogs/TODOProjects';
+import FreeFromStress from './blogs/FreeFromStress';
+import LateEveningWalking from './blogs/LateEveningWalking';
 
 function App() {
   return (
@@ -18,6 +16,8 @@ function App() {
       <Route path="/todoprojects" element={<TODOProject />}>
       </Route>
       <Route path="/freefromstress" element={<FreeFromStress />}>
+      </Route>
+      <Route path="/lateeveningwalking" element={<LateEveningWalking />}>
       </Route>
     </Routes>
   );

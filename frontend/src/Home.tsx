@@ -24,8 +24,9 @@ class Home extends React.Component {
           <p className='creation'>Following are stuff she created: </p>
           <p className='creation'><a href='/mazegen'>Maze Generation</a></p>
           <p className='creation'>Blogs</p>
+          <p className='creation'><a href='/lateeveningwalking'>傍晚散步 Late Evening Walking | last updated: 8/16/2022</a></p>
           <p className='creation'><a href='/freefromstress'>Free From Stress | last updated: 8/13/2022</a></p>
-          <p className='creation'><a href='/TODOProjects'>TODO: projects | last updated: 8/13/2022</a></p>
+          <p className='creation'><a href='/TODOProjects'>TODO: projects | last updated: 8/17/2022</a></p>
         </div>
       </body>
     );
