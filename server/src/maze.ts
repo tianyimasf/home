@@ -18,6 +18,10 @@ programmatically is a n x n boolean matrix where each coordinates for branches i
 notes: need to grow branches from branches, and need to set the rate properly
 */
 
+/* TODO: model the branches using coordinates and connections == graphs
+ *       model the paths using graph too
+ */
+
 enum Direction {
     Vertical = 'vertical',
     Horizonatal = 'horizontal',
@@ -45,6 +49,8 @@ const buildEmptyMaze = (n: number) => {
     }
     return maze;
 }
+
+// R4SU UQU9 53W9 NEM5 LL85
 
 // Base Branch
 const buildEdges = (n: number, maze: boolean[][]) => {
@@ -194,8 +200,8 @@ const isConnectingBranch = (newCoordinate: Coordinate, maze: boolean[][]): boole
 }
 
 const maybeConnectBranch = (beta: number): boolean => {
-    // TODO: check if connecting to the other branch will form a rectangle
-    //       using variable maze and a BFS.
+    // TODO: check if connecting to the other branch will block a path
+    //       using variable path and a BFS.
     //       if not, roll a die to decide if going to connect
     const p = Math.random()
     if (p < beta) { 

@@ -8,7 +8,7 @@ class TODOProject extends React.Component {
         <div className="App">
             <p className='header'>TODO: projects</p>
             <div className='blog-content'>
-                <p className='blog-date'>Created: 8/8/2022 | Last updated: 8/13/2022</p>
+                <p className='blog-date'>Created: 8/17/2022 | Last updated: 8/13/2022</p>
                 <p>(the following is a list of projects I want to finish in the order of appearance. trying to keep it under 3 projects at a time)</p>
                 <p><b>Maze generation | in progress</b></p>
                 <p>Following is the algorithm: </p>
