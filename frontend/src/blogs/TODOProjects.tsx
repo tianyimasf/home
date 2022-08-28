@@ -28,8 +28,12 @@ class TODOProject extends React.Component {
                 <p>Write simple heuristics to extract definitions from textbooks, and display summary statistics about them segmented by chapter.</p>
                 <br></br>
   
-                <p><b>Math and Art | not started</b></p>
-                <p>Combine math and art, generate fun patterns using some mathematic formulas</p>
+                <p><b>Florial Field | not started</b></p>
+                <p>Use generative art to grow a field of flowers🌸</p>
+                <br></br>
+
+                <p><b>Convo thru Emoji | not started</b></p>
+                <p>A chat bot that only respond with emojis to emojis</p>
                 <br></br>
 
                 <p><b>3D Shapes | not started</b></p>
