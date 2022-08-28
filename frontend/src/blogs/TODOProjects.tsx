@@ -21,11 +21,6 @@ class TODOProject extends React.Component {
                 <p>Pick an entrance. from that entrance, perform BFS. For the first search path that reached an edge and both side of the pathway
                 is blocked by branches of at least length 1, open the edge in front of the path. if one entrance doesn't work, try randomly 
                 another one</p>
-                <p>Notes: implementationally, need to store the branches as lists of coordinates. then uses a BFS to generate branches</p>
-                <br></br>
-  
-                <p><b>Glossary Extraction | not started</b></p>
-                <p>Write simple heuristics to extract definitions from textbooks, and display summary statistics about them segmented by chapter.</p>
                 <br></br>
   
                 <p><b>Florial Field | not started</b></p>
@@ -34,6 +29,10 @@ class TODOProject extends React.Component {
 
                 <p><b>Convo thru Emoji | not started</b></p>
                 <p>A chat bot that only respond with emojis to emojis</p>
+                <br></br>
+
+                <p><b>Glossary Extraction | not started</b></p>
+                <p>Write simple heuristics to extract definitions from textbooks, and display summary statistics about them segmented by chapter.</p>
                 <br></br>
 
                 <p><b>3D Shapes | not started</b></p>
