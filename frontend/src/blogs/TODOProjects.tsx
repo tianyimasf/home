@@ -10,6 +10,11 @@ class TODOProject extends React.Component {
             <div className='blog-content'>
                 <p className='blog-date'>Created: 8/17/2022 | Last updated: 8/13/2022</p>
                 <p>(the following is a list of projects I want to finish in the order of appearance. trying to keep it under 3 projects at a time)</p>
+                
+                <p><b>Coursera | in progress</b></p>
+                <p>Currently in further education, taking courses on UI/UX design, AWS Services, and Python.</p>
+                <br></br>
+                
                 <p><b>Maze generation | in progress</b></p>
                 <p>Following is the algorithm: </p>
                 <p>Step 1: forming an initial maze:</p>
@@ -33,12 +38,15 @@ class TODOProject extends React.Component {
                 <p><b>all about love project part.1 | not started</b></p>
                 <p>Inspired by and in honor of bell hooks' book all about love</p>
                 <p>Web scrape love poems and quotes from the internet, including authors and original books if possible.</p>
-
+                <br></br>
+                
                 <p><b>all about love project part.2 | not started</b></p>
                 <p>Visualize the love poems and quotes data scraped from part 1</p>
+                <br></br>
 
                 <p><b>all about love project part.3 | not started</b></p>
                 <p>Train a language model to write love poem</p>
+                <br></br>
 
                 <p><b>all about love project part.4 | not started</b></p>
                 <p>Develop a simple app to share love poems and quotes</p>
