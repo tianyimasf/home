@@ -33,3 +33,6 @@ class Graph():
 
     def getN(self):
         return this.n
+
+def buildEdge(n):
+    pass

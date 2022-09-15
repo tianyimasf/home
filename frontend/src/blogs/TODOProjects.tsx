@@ -22,29 +22,26 @@ class TODOProject extends React.Component {
                 is blocked by branches of at least length 1, open the edge in front of the path. if one entrance doesn't work, try randomly 
                 another one</p>
                 <br></br>
-  
+
+                <p><b>Life Story Kaggle Data Visualization | in progress</b></p>
+                <a href='https://www.kaggle.com/code/tianyimasf/life-story-eda-first-kaggle-notebook'>Link to Kaggle Notebook</a>
+                
                 <p><b>Florial Field | not started</b></p>
                 <p>Use generative art to grow a field of flowers🌸</p>
                 <br></br>
 
-                <p><b>Convo thru Emoji | not started</b></p>
-                <p>A chat bot that only respond with emojis to emojis</p>
-                <br></br>
+                <p><b>all about love project part.1 | not started</b></p>
+                <p>Inspired by and in honor of bell hooks' book all about love</p>
+                <p>Web scrape love poems and quotes from the internet, including authors and original books if possible.</p>
 
-                <p><b>Glossary Extraction | not started</b></p>
-                <p>Write simple heuristics to extract definitions from textbooks, and display summary statistics about them segmented by chapter.</p>
-                <br></br>
+                <p><b>all about love project part.2 | not started</b></p>
+                <p>Visualize the love poems and quotes data scraped from part 1</p>
 
-                <p><b>3D Shapes | not started</b></p>
-                <p>Model 3D Shapes and present them in browser</p>
-                <br></br>
+                <p><b>all about love project part.3 | not started</b></p>
+                <p>Train a language model to write love poem</p>
 
-                <p><b>Collage Maker | not started</b></p>
-                <p>Upload a set of PNGs and make collage with them!</p>
-                <br></br>
-
-                <p><b>Graph visualizer and analyzer | not started</b></p>
-                <p>Visualize and analyze complex networks! (plan to be implemented in python)</p>
+                <p><b>all about love project part.4 | not started</b></p>
+                <p>Develop a simple app to share love poems and quotes</p>
             </div>
         </div>
       </body>
