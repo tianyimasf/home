@@ -29,8 +29,9 @@ class TODOProject extends React.Component {
                 <br></br>
 
                 <p><b>Life Story Kaggle Data Visualization | in progress</b></p>
-                <a href='https://www.kaggle.com/code/tianyimasf/life-story-eda-first-kaggle-notebook'>Link to Kaggle Notebook</a>
-                
+                <p><a href='https://www.kaggle.com/code/tianyimasf/life-story-eda-first-kaggle-notebook'>Link to Kaggle Notebook</a></p>
+                <br></br>
+
                 <p><b>Florial Field | not started</b></p>
                 <p>Use generative art to grow a field of flowers🌸</p>
                 <br></br>
