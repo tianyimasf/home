@@ -5,6 +5,7 @@ import MazeGenerator from './MazeGenerator';
 import TODOProject from './blogs/TODOProjects';
 import FreeFromStress from './blogs/FreeFromStress';
 import LateEveningWalking from './blogs/LateEveningWalking';
+import PlayingOverwatch from './blogs/PlayingOverwatch';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
       <Route path="/freefromstress" element={<FreeFromStress />}>
       </Route>
       <Route path="/lateeveningwalking" element={<LateEveningWalking />}>
+      </Route>
+      <Route path="/playingoverwatch" element={<PlayingOverwatch />}>
       </Route>
     </Routes>
   );
