@@ -17,13 +17,13 @@ class EndOfYearReflect extends React.Component {
             </p>
             <p>
               It was Dec 16th, 2021. I just finished the final for my last
-              course to get finish my math degree. I did an interview for a
-              startup in San Francisco a couple days ago, and was waiting for an
-              answer. A guy was texting with me just starting a week ago, on
-              reddit of all the social media apps, and I went to the bar near my
-              apartment in "downtown" Rochester for the first time in a year for
-              a drink, by myself, to celebrate the end of everything and maybe
-              the beginning of a lot of things. I've spent most of my college by
+              course to finish my math degree. I did an interview for a startup
+              in San Francisco a couple days ago, and was waiting for an answer.
+              A guy was texting with me just starting a week ago, on reddit of
+              all the social media apps, and I went to the bar near my apartment
+              in "downtown" Rochester for the first time in a year for a drink,
+              by myself, to celebrate the end of everything and maybe the
+              beginning of a lot of things. I've spent most of my college by
               myself, so drinking alone wasn't a big deal to me at all, girl's
               gonna treat herself no matter what you feel me?
             </p>
