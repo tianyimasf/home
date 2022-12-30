@@ -77,9 +77,9 @@ class EndOfYearReflect extends React.Component {
             <p>
               After spending 2 months at his parents' house, we moved to San
               Francisco together for my job here. For the first time in my life,
-              I was really on myself, financially supporting myself, and have a
+              I was really on my own, financially supporting myself, and have a
               sort of consistent schedule so that I have evenings and weekends
-              completely for myself, which unfortunataly doesn't mean that I
+              completely for myself, which unfortunately doesn't mean that I
               still knew how to enjoy my free time. I mostly spent my free time
               with Mellow, was very awkward when I had alone time. On hindsight,
               I realized that I had a lot of trouble switching from being
@@ -118,13 +118,13 @@ class EndOfYearReflect extends React.Component {
               lazy activities, and 40% housekeeping/paperwork/ self-education
               for a job change. I love the little things that I do that makes me
               feel better, like trying out mindfulness app, new games, certain
-              musics, and going to nearby indie coffee shops for declish
-              pastries and coffee/tea, and little snacks, and long walks along
-              the water to the ferry building. It is bascially what I do before,
-              but more fine grained to what I want/need and better pacing. I
-              also give myself time to reflect and look inward. It makes me feel
-              grounded and have a little bit of clarity, understanding and
-              control over myself.{" "}
+              musics, and going to nearby indie coffee shops for delish pastries
+              and coffee/tea, and little snacks, and long walks along the water
+              to the ferry building. It is bascially what I do before, but more
+              fine grained to what I want/need and better pacing. I also give
+              myself time to reflect and look inward. It makes me feel grounded
+              and have a little bit of clarity, understanding and control over
+              myself.{" "}
             </p>
             <p>
               Looking forward, many challenges lies ahead. For 2023, I want me
