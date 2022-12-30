@@ -16,7 +16,7 @@ class EndOfYearReflect extends React.Component {
               memory is short-term, so I'll do my best.
             </p>
             <p>
-              It was Dec 16th, 2022. I just finished the final for my last
+              It was Dec 16th, 2021. I just finished the final for my last
               course to get finish my math degree. I did an interview for a
               startup in San Francisco a couple days ago, and was waiting for an
               answer. A guy was texting with me just starting a week ago, on
