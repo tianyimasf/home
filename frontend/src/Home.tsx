@@ -21,27 +21,44 @@ class Home extends React.Component {
                 She programs quite a bit, and apparently also talks in third
                 person perspective
               </p>
+              <p>She grew up in Beijing, with a lot of good people.</p>
               <p>
-                She grew up in Beijing, with a lot of good people, and consider
-                herself very privileged.
-              </p>
-              <p>
-                Her current interests includes algorithmic game theory, data
-                science, creative coding, and building software infrastructure.
+                Her current interests resolves around data and software,
+                especially climate informatic
               </p>
               <p>
                 <a href="https://www.linkedin.com/in/tianyi-ma-9b2012170/">
                   LinkedIn
                 </a>{" "}
                 <a href="https://github.com/tianyimasf">Github</a> Email:
-                tianyi.ma@scale.com
+                tianyi437@gmail.com
               </p>
             </div>
           </div>
           <br></br>
-          <p className="creation">Following are stuff she created: </p>
           <p className="creation">
-            <a href="/mazegen">Maze Generation</a>
+            Following are some of her coding projects:{" "}
+          </p>
+          <p className="creation">
+            <a href="https://stargazingnight.herokuapp.com/">
+              Star gazing! (3D scientific star visualization) Still ongoing
+            </a>
+          </p>
+          <p className="creation">
+            <a href="https://www.kaggle.com/code/tianyimasf/real-disaster-tweets-prediction-with-transformer">
+              Real Disaster Tweet Classification using Transformer: NLP (70%
+              progress)
+            </a>
+          </p>
+          <p className="creation">
+            <a href="https://www.kaggle.com/code/tianyimasf/wids-datathon-tianyi-yukyung-and-irsa">
+              WiDS Datathon: extreme weather forcasting
+            </a>
+          </p>
+          <p className="creation">
+            <a href="https://github.com/tianyimasf/data-mining-specialization-uiuc/blob/main/data-viz/week3/fb_network_3000_viz.png">
+              A FB social network visualization created using Tableau
+            </a>
           </p>
           <p className="creation">Blogs</p>
           <p className="creation">
